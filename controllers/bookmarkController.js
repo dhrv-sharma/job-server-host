@@ -95,7 +95,10 @@ const getSingleBookmark = async(req,res) =>{
     try {
         const myBookmark= await bookMark.findOne({userId :userId,job:jobId});
         if (!myBookmark) {
-            return res.status(200).json(null);
+            return res.status(200).json({
+                status:false,
+                bookMarkId:'none'
+            });
         }
 
         res.status(200).json({
