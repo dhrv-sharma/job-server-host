@@ -9,6 +9,7 @@ const jobRouter=require('./routes/job_router');
 const bodyparser=require('body-parser');
 const authRouter=require('./routes/auth_router');
 const bookMarkRouter=require('./routes/bookmark_routes');
+const userRouter=require('./routes/user_routes');
 
 
 
@@ -23,7 +24,15 @@ app.use('/api/job',jobRouter);
 
 //  middleware when /api/auth is  called
 app.use('/api/auth',authRouter);
+
+//  middleware when /api/bookmark is  called
+
 app.use('/api/bookmark',bookMarkRouter);
+
+
+//  middleware when /api/user is  called
+app.use('/api/user',userRouter);
+
 
 
 

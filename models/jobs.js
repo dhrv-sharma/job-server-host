@@ -44,6 +44,11 @@ const JobSchema= new mongoose.Schema({
         type:String,
         required:true
     },
+    company : {
+        type:String,
+        default:"Unknown",
+        required:false
+    },
     agentId : {
         type:String,
         required:true

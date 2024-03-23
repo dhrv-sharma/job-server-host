@@ -137,5 +137,23 @@ const searchjob=async(req,res)=>{
 }
 
 
+// get agent jobs
+const getAgentJobs= async(req,res) =>{
+    const uid= req.params.uid;
+    try{
+        const agentJobs= await jobs.find({agentId: uid},{__v:0,createdAt:0,updatedAt:0}).sort({
+            createdAt:-1
+        });
+
+        res.status(200).json(agentJobs);
+
+    }catch(error){
+        res.status(200).json({error:error.message});
+
+
+    }
+}
+
+
 // exporting
-module.exports ={createJob,updateJob,deleteJob,getjob,getAllJobs,searchjob};
+module.exports ={createJob,updateJob,deleteJob,getjob,getAllJobs,searchjob,getAgentJobs};

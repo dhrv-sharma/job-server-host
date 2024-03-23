@@ -40,6 +40,7 @@ const userSchema=new mongoose.Schema({
     },
     skills:{
         type:Array,
+        default:false,
         required:false // changed 
     },
     uid:{
