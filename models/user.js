@@ -47,6 +47,12 @@ const userSchema=new mongoose.Schema({
         type:String,
         required :false,
     },
+    resume: {
+        type:String,
+        required : false,
+        default : " "
+
+    },
     profile:{
         type:String,
         required :false,
