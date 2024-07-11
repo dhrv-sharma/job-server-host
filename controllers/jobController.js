@@ -92,7 +92,7 @@ const getAllJobs= async(req,res)=>{
         if (recent) {
             // .sort({ createdAt: -1 }): This sorts the results based on the createdAt field in descending order (-1 indicates descending order). This means the most recent documents will appear first in the results.
             // .limit(2): This limits the number of documents returned to 2. It ensures that only the two most recent job documents are fetched from the collection.
-            jobs=await Job.find({},{createdAt : 0, updatedAt:0,_v:0}).sort({createdAt:-1}).limit(2);
+            jobs=await Job.find({},{createdAt : 0, updatedAt:0,_v:0}).sort({createdAt:-1}).limit(4);
             
         }else{
             // return all jobs 
