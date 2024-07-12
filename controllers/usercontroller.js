@@ -175,8 +175,7 @@ const getAgents= async(req,res)=>{
             {$sample:{size:7}},
             {
                 $project :{
-                    _id:0,
-                    userid:1,
+                    _id:1,
                     username:1,
                     profile:1,
                     uid:1,
