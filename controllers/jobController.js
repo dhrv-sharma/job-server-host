@@ -141,7 +141,7 @@ const searchjob=async(req,res)=>{
 const getAgentJobs= async(req,res) =>{
     const uid= req.params.uid;
     try{
-        const agentJobs= await jobs.find({agentId: uid},{__v:0,createdAt:0,updatedAt:0}).sort({
+        const agentJobs= await jobs.find({uid: uid},{__v:0,createdAt:0,updatedAt:0}).sort({
             createdAt:-1
         });
 
