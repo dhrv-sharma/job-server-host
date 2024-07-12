@@ -176,9 +176,11 @@ const getAgents= async(req,res)=>{
             {
                 $project :{
                     _id:0,
+                    userid:1,
                     username:1,
                     profile:1,
                     uid:1,
+                    
                 }
             }
 
